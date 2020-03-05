@@ -31,6 +31,10 @@ private:
     StreetSegment* reverse(const StreetSegment* original);
 };
 
+StreetMap::StreetMap() {}
+
+StreetMap::~StreetMap() {}
+
 bool StreetMap::load(std::string mapFile)
 {
     ifstream fileStream;
@@ -40,33 +44,40 @@ bool StreetMap::load(std::string mapFile)
         return false;
     
     StreetSegment* street;
-    StreetSegment* reversedStreet;
     std::string streetName;
     
     int numStreetSegments;
     std::string::size_type endOfLastNumber;
     double coordData[NUMS_PER_SEGMENT];
+    std::size_t startIndex;
+    std::size_t endIndex;
+    
+    int a = 0;
     
     std::string line;
     while (std::getline(fileStream, line)) //automatically moves to next line
     {
         streetName = line;
         std::getline(fileStream, line);
-        
         numStreetSegments = std::stoi(line);
-        
-        std::getline(fileStream, line);
         
         for (int i = 0; i < numStreetSegments; ++i)
         {
+            std::getline(fileStream, line);
+            endOfLastNumber = 0;
+            startIndex = 0;
             for (int i = 0; i < NUMS_PER_SEGMENT; ++i)
-                coordData[i] = std::stod(line, &endOfLastNumber);
+            {
+                endIndex = line.find(' ', startIndex);
+                coordData[i] = std::stod(line.substr(startIndex, endIndex - startIndex));
+                startIndex = endIndex + 1;
+            }
             street = new StreetSegment(GeoCoord(coordData[0], coordData[1]),
                                        GeoCoord(coordData[2], coordData[3]),
                                        streetName);
-            reversedStreet = reverse(street);
             addSegment(street);
-            addSegment(reversedStreet);
+            addSegment(reverse(street));
+            a += 2;
         }
     }
     return true;

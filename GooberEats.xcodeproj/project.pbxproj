@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E0780DA240E140A001AF38D /* StreetMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E0780D9240E140A001AF38D /* StreetMap.cpp */; };
+		5E0780DA240E140A001AF38D /* StreetMap.h in Sources */ = {isa = PBXBuildFile; fileRef = 5E0780D9240E140A001AF38D /* StreetMap.h */; };
 		5E0780DD240E14AB001AF38D /* PointToPointRouter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E0780DC240E14AB001AF38D /* PointToPointRouter.cpp */; };
 		5E0780E3240E14E2001AF38D /* DeliveryOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E0780E2240E14E2001AF38D /* DeliveryOptimizer.cpp */; };
 		5E0780E6240E150D001AF38D /* DeliveryPlanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E0780E5240E150D001AF38D /* DeliveryPlanner.cpp */; };
@@ -28,7 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5E0780D9240E140A001AF38D /* StreetMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StreetMap.cpp; sourceTree = "<group>"; };
+		5E0780D9240E140A001AF38D /* StreetMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StreetMap.h; sourceTree = "<group>"; };
 		5E0780DC240E14AB001AF38D /* PointToPointRouter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PointToPointRouter.cpp; sourceTree = "<group>"; };
 		5E0780E2240E14E2001AF38D /* DeliveryOptimizer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeliveryOptimizer.cpp; sourceTree = "<group>"; };
 		5E0780E5240E150D001AF38D /* DeliveryPlanner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeliveryPlanner.cpp; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 			children = (
 				5E3F2FFD240CFCB9009FB567 /* main.cpp */,
 				5E3F3004240CFD06009FB567 /* ExpandableHashMap.h */,
-				5E0780D9240E140A001AF38D /* StreetMap.cpp */,
+				5E0780D9240E140A001AF38D /* StreetMap.h */,
 				5E0780DC240E14AB001AF38D /* PointToPointRouter.cpp */,
 				5E0780E2240E14E2001AF38D /* DeliveryOptimizer.cpp */,
 				5E0780E5240E150D001AF38D /* DeliveryPlanner.cpp */,
@@ -146,7 +146,7 @@
 			files = (
 				5E3F2FFE240CFCB9009FB567 /* main.cpp in Sources */,
 				5E0780E3240E14E2001AF38D /* DeliveryOptimizer.cpp in Sources */,
-				5E0780DA240E140A001AF38D /* StreetMap.cpp in Sources */,
+				5E0780DA240E140A001AF38D /* StreetMap.h in Sources */,
 				5E0780E6240E150D001AF38D /* DeliveryPlanner.cpp in Sources */,
 				5E0780DD240E14AB001AF38D /* PointToPointRouter.cpp in Sources */,
 				5E0780E8240E161A001AF38D /* support.cpp in Sources */,

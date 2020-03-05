@@ -85,10 +85,12 @@ private:
     void initializeBuckets(unsigned int numBuckets);
 
     /// Deallocates each bucket's List from memory, then deallocates hash map array.
-    void deleteBuckets();
+    /// @param buckets - pointer to array of buckets
+    /// @param numBuckets - number of buckets in the array argument
+    void deleteBucketArray(std::list<Pair>* *buckets, unsigned int numBuckets);
 
     /// Potentially temporary function; prints information about hash map.
-    void dump();
+    void dump() const;
 };
 
 template<typename KeyType, typename ValueType>
@@ -106,14 +108,14 @@ template<typename KeyType, typename ValueType>
 ExpandableHashMap<KeyType, ValueType>::~ExpandableHashMap()
 {
     // deletes hash map array
-    deleteBuckets();
+    deleteBucketArray(m_buckets, m_numBuckets);
 }
 
 template<typename KeyType, typename ValueType>
 void ExpandableHashMap<KeyType, ValueType>::reset()
 {
     // deletes hash map array and reallocates it with default size
-    deleteBuckets();
+    deleteBucketArray(m_buckets, m_numBuckets);
     initializeBuckets(INIT_BUCKETS);
 }
 
@@ -213,24 +215,22 @@ template <typename KeyType, typename ValueType>
 void ExpandableHashMap<KeyType, ValueType>::doubleBuckets()
 {
     //expanded hash map will have double the size of the current hash map
-    const unsigned int NEW_NUM_BUCKETS = m_numBuckets * 2;
+    const unsigned int OLD_NUM_BUCKETS = m_numBuckets;
     
     //allocate new hash map array and save its pointer in a new variable; new array has above size
-    std::list<Pair>* *newBucketArray = new std::list<Pair>* [NEW_NUM_BUCKETS];
+    std::list<Pair>* *oldBucketArray = m_buckets;
     
-    // point new hash map array's pointers to nullptr
-    for (int i = 0; i < NEW_NUM_BUCKETS; ++i)
-        *(newBucketArray + i) = nullptr;
+    initializeBuckets(m_numBuckets * 2);
     
     // bucketNum and pairToSplice will be used multiple times, so we create it once before the loops
     int bucketNum;
     typename std::list<Pair>::const_iterator pairToSplice;
     
     // loop through each bucket in original hash map array
-    for (int b = 0; b < m_numBuckets; ++b)
+    for (int b = 0; b < OLD_NUM_BUCKETS; ++b)
     {
         // get reference to current bucket's pointer to its list
-        std::list<Pair>* &currentBucket = *(m_buckets + b); //REFERENCE to POINTER to LIST of PAIRS, constant
+        std::list<Pair>* &currentBucket = *(oldBucketArray + b); //REFERENCE to POINTER to LIST of PAIRS, constant
         
         // if there's no list of pairs in the bucket to transfer or if the bucket has no pairs in its list,
         // move on to next bucket
@@ -244,10 +244,10 @@ void ExpandableHashMap<KeyType, ValueType>::doubleBuckets()
             pairToSplice = currentBucket->begin();
             
             // get a hash of the key (hash needs to defined and implemented in support.h/cpp) and get bucket number through modulus
-            bucketNum = hash(pairToSplice->m_key) % NEW_NUM_BUCKETS;
+            bucketNum = getBucketNumber(pairToSplice->m_key);
             
             // get reference to new bucket's pointer to its list (bucket that pair belongs to)
-            std::list<Pair>* &newBucket = *(newBucketArray + bucketNum); //REFERENCE to POINTER to LIST of PAIRS, constant
+            std::list<Pair>* &newBucket = *(m_buckets + bucketNum); //REFERENCE to POINTER to LIST of PAIRS, constant
             
             // if a list at the new bucket has yet to be created, allocate one
             if (newBucket == nullptr)
@@ -260,11 +260,7 @@ void ExpandableHashMap<KeyType, ValueType>::doubleBuckets()
      }
     
     // deallocate all original buckets and the original hash map array
-    deleteBuckets();
-    // set current number of buckets to new array's number of buckets
-    m_numBuckets = NEW_NUM_BUCKETS;
-    // point hash map array pointer to new hash map array
-    m_buckets = newBucketArray;
+    deleteBucketArray(oldBucketArray, OLD_NUM_BUCKETS);
 }
 
 template <typename KeyType, typename ValueType>
@@ -280,19 +276,19 @@ void ExpandableHashMap<KeyType, ValueType>::initializeBuckets(unsigned int numBu
 }
 
 template <typename KeyType, typename ValueType>
-void ExpandableHashMap<KeyType, ValueType>::deleteBuckets()
+void ExpandableHashMap<KeyType, ValueType>::deleteBucketArray(std::list<Pair>* *buckets, unsigned int numBuckets)
 {
     // deallocate each list that each bucket points to
-    for (int i = 0; i < m_numBuckets; ++i)
-        delete *(m_buckets + i); //m_buckets[i] is also usable here b/c [] dereferences
+    for (int i = 0; i < numBuckets; ++i)
+        delete *(buckets + i); //m_buckets[i] is also usable here b/c [] dereferences
     // deallocate the hash map array itself
-    delete [] m_buckets;
+    delete [] buckets;
 }
 
 #include <iostream>
 
 template <typename KeyType, typename ValueType>
-void ExpandableHashMap<KeyType, ValueType>::dump()
+void ExpandableHashMap<KeyType, ValueType>::dump() const
 {
     // print number of buckets to cerr
     std::cerr << m_numBuckets << " buckets" << std::endl;
@@ -307,7 +303,7 @@ void ExpandableHashMap<KeyType, ValueType>::dump()
             std::cerr << "size of " << (*(m_buckets + i))->size() << std::endl;
             typename std::list<Pair>::iterator it;
             for (it = (*(m_buckets + i))->begin(); it != (*(m_buckets + i))->end(); ++it)
-                std::cerr << "\t" << it->m_key << ", " << it->m_value << std::endl;
+                std::cerr << "\t" << &(it->m_key) << ", " << &(it->m_value) << std::endl;
         }
         else
             std::cerr << "None (no list)" << std::endl;
