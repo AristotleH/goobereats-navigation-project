@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>100B72C3-C702-4E5B-ACE9-7232BAA33A97</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
+			<key>fileName</key>
+			<string>100B72C3-C702-4E5B-ACE9-7232BAA33A97.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>GooberEats-eiqstcofaldhrlghwdhezoujmnkw</string>
+			<key>timeStartedRecording</key>
+			<real>605071862.70541704</real>
+			<key>timeStoppedRecording</key>
+			<real>605071863.57626796</real>
+			<key>title</key>
+			<string>Build target GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>100B72C3-C702-4E5B-ACE9-7232BAA33A97</string>
+		</dict>
+	</dict>
+	<key>preserveOldLogs</key>
+	<true/>
+</dict>
+</plist>
