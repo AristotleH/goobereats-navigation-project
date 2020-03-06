@@ -9,11 +9,10 @@
 #include <queue>
 #include <set>
 #include <list>
+#include <functional>
 
 #include "providedMyVersion.h"
 #include "support.h"
-
-using namespace std;
 
 struct MapNode
 {
@@ -53,9 +52,9 @@ DELIVERY_RESULT PointToPointRouter::generatePointToPointRoute(const GeoCoord& st
                                                               std::list<StreetSegment>& route,
                                                               double& totalDistanceTravelled)
 {
-    priority_queue<MapNode*> open;
-    set<GeoCoord> closed;
-    vector<StreetSegment> connectingSegments;
+    std::priority_queue<MapNode*> open;
+    std::set<GeoCoord> closed;
+    std::vector<StreetSegment> connectingSegments;
     //pointer to reference, which is just the reference refers to and not the reference itself
     //as the reference doesn't exist in memory
     double gScoreGenerated = 0.0;
@@ -80,7 +79,7 @@ DELIVERY_RESULT PointToPointRouter::generatePointToPointRoute(const GeoCoord& st
             //return SUCCESS WE DID IT FILL IN HERE
         }
         getSegmentsThatStartWith(current, connectingSegments);
-        for (vector<StreetSegment>::iterator it = connectingSegments.begin(); it != connectingSegments.end(); ++it)
+        for (auto it = connectingSegments.begin(); it != connectingSegments.end(); ++it)
         {
             if (closed.find(it->m_end) != closed.end())
                 continue;

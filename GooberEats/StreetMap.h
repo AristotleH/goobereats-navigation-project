@@ -13,7 +13,26 @@
 #include "support.h"
 #include "ExpandableHashMap.h"
 
-using namespace std;
+unsigned int hash(const GeoCoord& g)
+{
+    return std::hash<std::string>()(std::to_string(g.m_lat) + std::to_string(g.m_lon));
+}
+
+unsigned int hash(const StreetSegment& s)
+{
+    return std::hash<std::string>()(std::to_string(s.m_start.m_lat) + std::to_string(s.m_start.m_lon) +
+                                    std::to_string(s.m_end.m_lat) + std::to_string(s.m_end.m_lon));
+}
+
+bool operator<(const GeoCoord& lhs, const GeoCoord& rhs)
+{
+    return hash(lhs) < hash(rhs);
+}
+
+bool operator<(const StreetSegment& lhs, const StreetSegment& rhs)
+{
+    return hash(lhs) < hash(rhs);
+}
 
 class StreetMap
 {
@@ -24,8 +43,8 @@ public:
     bool getSegmentsThatStartWith(const GeoCoord& gc,
                                   std::vector<StreetSegment>& segs) const;
 private:
-    ExpandableHashMap<GeoCoord, vector<StreetSegment*>> geocoordToSegments;
-    set<StreetSegment> allSegments;
+    ExpandableHashMap<GeoCoord, std::vector<StreetSegment*>> geocoordToSegments;
+    std::set<StreetSegment> allSegments;
     
     void addSegment(StreetSegment* segment);
     StreetSegment* reverse(const StreetSegment* original);
@@ -37,8 +56,8 @@ StreetMap::~StreetMap() {}
 
 bool StreetMap::load(std::string mapFile)
 {
-    ifstream fileStream;
-    fileStream.open(mapFile.c_str(), ios::in);
+    std::ifstream fileStream;
+    fileStream.open(mapFile.c_str(), std::ios::in);
     
     if (!fileStream)
         return false;
@@ -51,8 +70,6 @@ bool StreetMap::load(std::string mapFile)
     double coordData[NUMS_PER_SEGMENT];
     std::size_t startIndex;
     std::size_t endIndex;
-    
-    int a = 0;
     
     std::string line;
     while (std::getline(fileStream, line)) //automatically moves to next line
@@ -77,7 +94,6 @@ bool StreetMap::load(std::string mapFile)
                                        streetName);
             addSegment(street);
             addSegment(reverse(street));
-            a += 2;
         }
     }
     return true;
@@ -86,10 +102,10 @@ bool StreetMap::load(std::string mapFile)
 void StreetMap::addSegment(StreetSegment* segment)
 {
     allSegments.insert(*segment);
-    vector<StreetSegment*>* sharedStartCoord = geocoordToSegments.find(segment->m_start);
+    std::vector<StreetSegment*>* sharedStartCoord = geocoordToSegments.find(segment->m_start);
     if (sharedStartCoord == nullptr)
     {
-        sharedStartCoord = new vector<StreetSegment*>;
+        sharedStartCoord = new std::vector<StreetSegment*>;
         geocoordToSegments.associate(segment->m_start, *sharedStartCoord);
     }
     sharedStartCoord->push_back(segment);

@@ -67,7 +67,7 @@ private:
     // pointer that points to a list of pairs that map to the bucket's number (its array index).
     std::list<Pair>* *m_buckets; //POINTER to ARRAY OF POINTERS to LISTS containing PAIRS
 
-    //Externally held statistics about the hash map
+    //Externally held information about the hash map
     unsigned int m_numBuckets;
     unsigned int m_numPairs;
 
@@ -147,9 +147,9 @@ void ExpandableHashMap<KeyType, ValueType>::associate(const KeyType& key, const 
     // if there is or was at least one pair in the bucket, meaning that the bucket points to a list
     else
     {
-        typename std::list<Pair>::iterator it; //typename needed, also iterators are like pointers
+        //typename needed, also iterators are like pointers
         // check if there's a pair with the key passed into the function
-        for (it = bucket->begin(); it != bucket->end(); ++it)
+        for (auto it = bucket->begin(); it != bucket->end(); ++it)
         {
             // if there is a pair with that key, change the value of that pair to the value passed into the function
             // then return from the function
@@ -190,8 +190,7 @@ const ValueType* ExpandableHashMap<KeyType, ValueType>::find(const KeyType& key)
         return nullptr;
     
     // loop through bucket's pair list; if one of the keys matches the searched key, return a pointer to the key's value
-    typename std::list<Pair>::iterator it;
-    for (it = bucket->begin(); it != bucket->end(); ++it)
+    for (auto it = bucket->begin(); it != bucket->end(); ++it)
         if (it->m_key == key)
             return &(it->m_value);
     

@@ -4,8 +4,6 @@
 //TODO: redo class naming/structure on 03/05/2020
 #include "StreetMap.h"
 
-using namespace std;
-
 int main()
 {
     StreetMap hello; //no parens!!!!

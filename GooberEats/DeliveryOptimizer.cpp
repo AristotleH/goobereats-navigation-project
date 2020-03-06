@@ -15,3 +15,8 @@ public:
                                double& oldCrowDistance,
                                double& newCrowDistance) const;
 };
+
+void DeliveryOptimizer::optimizeDeliveryOrder(const GeoCoord& depot,
+                           std::vector<DeliveryRequest>& deliveries,
+                           double& oldCrowDistance,
+                           double& newCrowDistance) const;
