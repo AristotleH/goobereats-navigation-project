@@ -6,6 +6,74 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>0028F84B-4336-44EF-B471-DC28BAB0AAF7</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0028F84B-4336-44EF-B471-DC28BAB0AAF7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605229981.24236906</real>
+			<key>timeStoppedRecording</key>
+			<real>605229985.82525802</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>0028F84B-4336-44EF-B471-DC28BAB0AAF7</string>
+		</dict>
+		<key>10D555B1-F0B8-4577-8E2A-854A8EE7C091</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>10D555B1-F0B8-4577-8E2A-854A8EE7C091.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605230116.82870698</real>
+			<key>timeStoppedRecording</key>
+			<real>605230120.75255096</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>10D555B1-F0B8-4577-8E2A-854A8EE7C091</string>
+		</dict>
 		<key>2A9EF334-E776-4421-B1CD-30D4D61F62B9</key>
 		<dict>
 			<key>className</key>
@@ -141,6 +209,40 @@
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
 			<string>36933A26-70BF-4648-9B8E-26E947CCC442</string>
+		</dict>
+		<key>3E2A1A4D-595C-4431-97B6-9444196B1B65</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>3E2A1A4D-595C-4431-97B6-9444196B1B65.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605228894.146299</real>
+			<key>timeStoppedRecording</key>
+			<real>605228905.59974802</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>3E2A1A4D-595C-4431-97B6-9444196B1B65</string>
 		</dict>
 		<key>42044BB2-8EDC-4614-A712-D32583ACE1AB</key>
 		<dict>
@@ -311,6 +413,40 @@
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
 			<string>4A4B78F9-BBE4-4946-B237-98F218516A28</string>
+		</dict>
+		<key>4AB3389C-7C16-4BCD-B36E-D1B2F32CD034</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>4AB3389C-7C16-4BCD-B36E-D1B2F32CD034.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605240530.30252099</real>
+			<key>timeStoppedRecording</key>
+			<real>605240533.01903105</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>4AB3389C-7C16-4BCD-B36E-D1B2F32CD034</string>
 		</dict>
 		<key>4FF369B3-7344-44BF-8654-042499C467B2</key>
 		<dict>
@@ -516,6 +652,40 @@
 			<key>uniqueIdentifier</key>
 			<string>5E2B3514-0032-4023-9336-5C4969A70D54</string>
 		</dict>
+		<key>5E31B4EB-5096-4E82-BA35-49CD19D47383</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5E31B4EB-5096-4E82-BA35-49CD19D47383.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605230050.56875205</real>
+			<key>timeStoppedRecording</key>
+			<real>605230055.61271095</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>5E31B4EB-5096-4E82-BA35-49CD19D47383</string>
+		</dict>
 		<key>5EAC42AF-E160-4492-8891-F2DBB163CF57</key>
 		<dict>
 			<key>className</key>
@@ -583,6 +753,40 @@
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
 			<string>61122060-DB8B-4338-A485-AF6E8F19439E</string>
+		</dict>
+		<key>62A9FEAD-77D1-4A8C-8247-092CEB6A6811</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>62A9FEAD-77D1-4A8C-8247-092CEB6A6811.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605229509.08513296</real>
+			<key>timeStoppedRecording</key>
+			<real>605229512.41108406</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>62A9FEAD-77D1-4A8C-8247-092CEB6A6811</string>
 		</dict>
 		<key>6BFF8F0D-59ED-43F4-94B8-BE700332178A</key>
 		<dict>
@@ -686,6 +890,40 @@
 			<key>uniqueIdentifier</key>
 			<string>757052BA-D5D6-4654-8F1C-6C15DEF802CC</string>
 		</dict>
+		<key>85274F59-AF38-4421-80C3-99CC1D0EB349</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>85274F59-AF38-4421-80C3-99CC1D0EB349.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605242035.22893202</real>
+			<key>timeStoppedRecording</key>
+			<real>605242038.07008004</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>85274F59-AF38-4421-80C3-99CC1D0EB349</string>
+		</dict>
 		<key>8AFBFB2B-A42F-488C-A9F7-1447DA70911A</key>
 		<dict>
 			<key>className</key>
@@ -719,6 +957,40 @@
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
 			<string>8AFBFB2B-A42F-488C-A9F7-1447DA70911A</string>
+		</dict>
+		<key>914F8E86-FEFB-4477-B221-C540E06E528C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>914F8E86-FEFB-4477-B221-C540E06E528C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605242140.30201304</real>
+			<key>timeStoppedRecording</key>
+			<real>605247952.32338703</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>914F8E86-FEFB-4477-B221-C540E06E528C</string>
 		</dict>
 		<key>929C237A-7F5E-4C2A-AE6F-7DF3E317FABF</key>
 		<dict>
@@ -1162,6 +1434,40 @@
 			<key>uniqueIdentifier</key>
 			<string>B49C39A0-DD7E-417A-BF21-069F8920E012</string>
 		</dict>
+		<key>B646C2F2-0781-4D9F-B865-03EEC42B4F50</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B646C2F2-0781-4D9F-B865-03EEC42B4F50.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605229611.20302498</real>
+			<key>timeStoppedRecording</key>
+			<real>605229656.44421899</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>B646C2F2-0781-4D9F-B865-03EEC42B4F50</string>
+		</dict>
 		<key>B9BEAB9F-BB4D-4536-BED3-7E3F7DBA025D</key>
 		<dict>
 			<key>className</key>
@@ -1196,6 +1502,142 @@
 			<key>uniqueIdentifier</key>
 			<string>B9BEAB9F-BB4D-4536-BED3-7E3F7DBA025D</string>
 		</dict>
+		<key>BD3D43ED-6171-41BB-B066-0F3025C5811E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BD3D43ED-6171-41BB-B066-0F3025C5811E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605242049.59579694</real>
+			<key>timeStoppedRecording</key>
+			<real>605242138.67196095</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>BD3D43ED-6171-41BB-B066-0F3025C5811E</string>
+		</dict>
+		<key>BD9616A4-760A-4D5E-AFFC-92154C63B5F0</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BD9616A4-760A-4D5E-AFFC-92154C63B5F0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605240108.31263995</real>
+			<key>timeStoppedRecording</key>
+			<real>605240111.46267498</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>BD9616A4-760A-4D5E-AFFC-92154C63B5F0</string>
+		</dict>
+		<key>BE8482FE-4C95-4D6C-9754-F7113D12B568</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BE8482FE-4C95-4D6C-9754-F7113D12B568.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605241470.56590104</real>
+			<key>timeStoppedRecording</key>
+			<real>605241473.603163</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>BE8482FE-4C95-4D6C-9754-F7113D12B568</string>
+		</dict>
+		<key>BEDF7160-878F-40FC-828C-E0751D54D2BB</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BEDF7160-878F-40FC-828C-E0751D54D2BB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605242141.016397</real>
+			<key>timeStoppedRecording</key>
+			<real>605247952.36059701</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>BEDF7160-878F-40FC-828C-E0751D54D2BB</string>
+		</dict>
 		<key>BF246404-E2BB-4F85-8909-26580DD39A61</key>
 		<dict>
 			<key>className</key>
@@ -1229,6 +1671,40 @@
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
 			<string>BF246404-E2BB-4F85-8909-26580DD39A61</string>
+		</dict>
+		<key>C76409AB-6D78-4455-8929-4DD182956931</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C76409AB-6D78-4455-8929-4DD182956931.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605229657.56148195</real>
+			<key>timeStoppedRecording</key>
+			<real>605229980.12270105</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>C76409AB-6D78-4455-8929-4DD182956931</string>
 		</dict>
 		<key>C987AE17-9F56-4BC3-BCC4-02549BDEAF11</key>
 		<dict>
@@ -1332,6 +1808,40 @@
 			<key>uniqueIdentifier</key>
 			<string>D15B86ED-3D5D-4AAC-8282-7CEF898F47A3</string>
 		</dict>
+		<key>D82F1A58-BC00-4E6A-8178-F48F7A98028A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D82F1A58-BC00-4E6A-8178-F48F7A98028A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605242044.53142905</real>
+			<key>timeStoppedRecording</key>
+			<real>605242046.08222795</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>D82F1A58-BC00-4E6A-8178-F48F7A98028A</string>
+		</dict>
 		<key>DA70773D-B403-4EEB-96B5-40D6BE12992C</key>
 		<dict>
 			<key>className</key>
@@ -1434,6 +1944,40 @@
 			<key>uniqueIdentifier</key>
 			<string>E171AA7B-2463-40E6-B442-4E7F7453725C</string>
 		</dict>
+		<key>E27DF0D7-32BA-44E0-81D4-99E1C371A4C1</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E27DF0D7-32BA-44E0-81D4-99E1C371A4C1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605242046.20805502</real>
+			<key>timeStoppedRecording</key>
+			<real>605242047.92868304</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>E27DF0D7-32BA-44E0-81D4-99E1C371A4C1</string>
+		</dict>
 		<key>E70BF681-0738-47A6-8F09-A560F0DD1797</key>
 		<dict>
 			<key>className</key>
@@ -1535,6 +2079,40 @@
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
 			<string>EAEFAA79-B84F-4694-A299-2D09D93B7689</string>
+		</dict>
+		<key>EB9383B1-2A4F-4236-923C-650B31C2AE9B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EB9383B1-2A4F-4236-923C-650B31C2AE9B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605240167.12718499</real>
+			<key>timeStoppedRecording</key>
+			<real>605240169.710109</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>EB9383B1-2A4F-4236-923C-650B31C2AE9B</string>
 		</dict>
 		<key>EE480550-BB51-4691-896A-173F8580214D</key>
 		<dict>

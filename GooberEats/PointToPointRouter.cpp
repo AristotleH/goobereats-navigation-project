@@ -1,18 +1,8 @@
-//
-//  PointToPointRouter.cpp
-//  GooberEats
-//
-//  Created by Aristotle Henderson.
-//  Copyright © 2020 Aristotle Henderson. All rights reserved.
-//
-
+#include "provided.h"
+#include <list>
 #include <queue>
 #include <set>
-#include <list>
-#include <functional>
-
-#include "providedMyVersion.h"
-#include "support.h"
+using namespace std;
 
 struct MapNode
 {
@@ -25,67 +15,89 @@ struct MapNode
         : m_coord(coord), m_prevNode(prev), m_prevSegment(prevSegment), m_gScore(gScore), m_hScore(hScore) {}
 };
 
+inline
+double fScore(double gScore, double hScore)
+{
+    return gScore + hScore;
+}
+
 bool operator<(const MapNode& lhs, const MapNode& rhs)
 {
     //greater than and not less than because MapNodes with least f-score are prioritized
-    return ((lhs.m_gScore + lhs.m_hScore) > (rhs.m_gScore + rhs.m_hScore));
+    return (fScore(lhs.m_gScore, lhs.m_hScore) > fScore(rhs.m_gScore, rhs.m_hScore));
 }
 
-class PointToPointRouter
+class PointToPointRouterImpl
 {
 public:
-    PointToPointRouter(const StreetMap* sm);
-    ~PointToPointRouter();
-    DELIVERY_RESULT generatePointToPointRoute(const GeoCoord& start,
-                                              const GeoCoord& end,
-                                              std::list<StreetSegment>& route,
-                                              double& totalDistanceTravelled) const;
+    PointToPointRouterImpl(const StreetMap* sm);
+    ~PointToPointRouterImpl();
+    DeliveryResult generatePointToPointRoute(
+        const GeoCoord& start,
+        const GeoCoord& end,
+        list<StreetSegment>& route,
+        double& totalDistanceTravelled) const;
 private:
-    void constructPath(const MapNode* nodeStartSegment, const GeoCoord& start, std::list<StreetSegment>& route);
+    const StreetMap* STREET_MAP;
+    
+    void constructPath(const MapNode* nodeStartSegment, const GeoCoord& start,
+                       list<StreetSegment>& route, double& totalDistanceTravelled) const;
 };
 
-/*
- A* algorithm implementation for point-to-point routing.
- */
-DELIVERY_RESULT PointToPointRouter::generatePointToPointRoute(const GeoCoord& start,
-                                                              const GeoCoord& end,
-                                                              std::list<StreetSegment>& route,
-                                                              double& totalDistanceTravelled)
+PointToPointRouterImpl::PointToPointRouterImpl(const StreetMap* sm)
+    : STREET_MAP(sm)
 {
-    std::priority_queue<MapNode*> open;
-    std::set<GeoCoord> closed;
-    std::vector<StreetSegment> connectingSegments;
+}
+
+PointToPointRouterImpl::~PointToPointRouterImpl()
+{
+}
+
+/*
+ Finds route from starting coordinate to ending coordinate using the A* algorithm.
+ */
+DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
+        const GeoCoord& start,
+        const GeoCoord& end,
+        list<StreetSegment>& route,
+        double& totalDistanceTravelled) const
+{
+    priority_queue<MapNode*> open;
+    set<GeoCoord> closed;
+    vector<StreetSegment> connectingSegments;
     //pointer to reference, which is just the reference refers to and not the reference itself
     //as the reference doesn't exist in memory
     double gScoreGenerated = 0.0;
-    double hScoreGenerated = 0.0; //distanceEarthMiles();
-    MapNode* current = new MapNode(start,
-                                   nullptr,
-                                   nullptr,
-                                   gScoreGenerated,
-                                   hScoreGenerated);
+    double hScoreGenerated = distanceEarthMiles(start, end);
+    MapNode* current = new MapNode(
+        start,
+        nullptr,
+        nullptr,
+        gScoreGenerated,
+        hScoreGenerated);
     open.push(current);
-    if (!getSegmentsThatStartWith(end, connectingSegments)  &&
-        !getSegmentsThatStartWith(start, connectingSegments))
-        //return RESULT FAILURE FILL IN HERE;
-    ;
+    if (!STREET_MAP->getSegmentsThatStartWith(end, connectingSegments)  &&
+        !STREET_MAP->getSegmentsThatStartWith(start, connectingSegments))
+    {
+        return BAD_COORD;
+    }
     while (!open.empty())
     {
         current = open.top();
         open.pop();
         if (current->m_hScore == 0)
         {
-            constructPath(current, start, route);
-            //return SUCCESS WE DID IT FILL IN HERE
+            constructPath(current, start, route, totalDistanceTravelled);
+            return DELIVERY_SUCCESS;
         }
-        getSegmentsThatStartWith(current, connectingSegments);
+        STREET_MAP->getSegmentsThatStartWith(current->m_coord, connectingSegments);
         for (auto it = connectingSegments.begin(); it != connectingSegments.end(); ++it)
         {
-            if (closed.find(it->m_end) != closed.end())
+            if (closed.find(it->end) != closed.end())
                 continue;
-            gScoreGenerated = current->m_gScore; //+ distanceEarthMiles(current->m_coord, *it);
-            hScoreGenerated = 0.0; // distanceEarthMiles(current->m_coord, end);
-            open.push(new MapNode(it->m_end,
+            gScoreGenerated = current->m_gScore + distanceEarthMiles(current->m_coord, it->end);
+            hScoreGenerated = distanceEarthMiles(current->m_coord, end);
+            open.push(new MapNode(it->end,
                                   current,
                                   &(*it),
                                   gScoreGenerated,
@@ -94,14 +106,43 @@ DELIVERY_RESULT PointToPointRouter::generatePointToPointRoute(const GeoCoord& st
         closed.insert(current->m_coord);
         delete current;
     }
-    //return NOT FOUND
+    return NO_ROUTE;
 }
 
-void PointToPointRouter::constructPath(const MapNode* nodeStartSegment, const GeoCoord& start, std::list<StreetSegment>& route)
+void PointToPointRouterImpl::constructPath(const MapNode* nodeStartSegment, const GeoCoord& start,
+                                           list<StreetSegment>& route, double& totalDistanceTravelled) const
 {
+    totalDistanceTravelled = 0;
     while (!(nodeStartSegment->m_coord == start))
     {
         route.push_front(*(nodeStartSegment->m_prevSegment));
+        totalDistanceTravelled += distanceEarthMiles(
+            nodeStartSegment->m_prevSegment->start,
+            nodeStartSegment->m_prevSegment->end);
         nodeStartSegment = nodeStartSegment->m_prevNode;
     }
+}
+
+//******************** PointToPointRouter functions ***************************
+
+// These functions simply delegate to PointToPointRouterImpl's functions.
+// You probably don't want to change any of this code.
+
+PointToPointRouter::PointToPointRouter(const StreetMap* sm)
+{
+    m_impl = new PointToPointRouterImpl(sm);
+}
+
+PointToPointRouter::~PointToPointRouter()
+{
+    delete m_impl;
+}
+
+DeliveryResult PointToPointRouter::generatePointToPointRoute(
+        const GeoCoord& start,
+        const GeoCoord& end,
+        list<StreetSegment>& route,
+        double& totalDistanceTravelled) const
+{
+    return m_impl->generatePointToPointRoute(start, end, route, totalDistanceTravelled);
 }

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E0780DA240E140A001AF38D /* StreetMap.h in Sources */ = {isa = PBXBuildFile; fileRef = 5E0780D9240E140A001AF38D /* StreetMap.h */; };
-		5E0780DD240E14AB001AF38D /* PointToPointRouter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E0780DC240E14AB001AF38D /* PointToPointRouter.cpp */; };
-		5E0780E3240E14E2001AF38D /* DeliveryOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E0780E2240E14E2001AF38D /* DeliveryOptimizer.cpp */; };
-		5E0780E6240E150D001AF38D /* DeliveryPlanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E0780E5240E150D001AF38D /* DeliveryPlanner.cpp */; };
-		5E0780E8240E161A001AF38D /* support.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E0780E7240E161A001AF38D /* support.cpp */; };
-		5E3F2FFE240CFCB9009FB567 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F2FFD240CFCB9009FB567 /* main.cpp */; };
+		5E3C9F182412C3AC00F6DDB8 /* DeliveryPlanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9F0D2412C3AC00F6DDB8 /* DeliveryPlanner.cpp */; };
+		5E3C9F192412C3AC00F6DDB8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9F102412C3AC00F6DDB8 /* main.cpp */; };
+		5E3C9F1A2412C3AC00F6DDB8 /* StreetMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9F122412C3AC00F6DDB8 /* StreetMap.cpp */; };
+		5E3C9F1B2412C3AC00F6DDB8 /* DeliveryOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9F132412C3AC00F6DDB8 /* DeliveryOptimizer.cpp */; };
+		5E3C9F1C2412C3AC00F6DDB8 /* PointToPointRouter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9F142412C3AC00F6DDB8 /* PointToPointRouter.cpp */; };
+		5E3C9F1D2412C3AC00F6DDB8 /* support.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9F172412C3AC00F6DDB8 /* support.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,18 +28,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5E0780D9240E140A001AF38D /* StreetMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StreetMap.h; sourceTree = "<group>"; };
-		5E0780DC240E14AB001AF38D /* PointToPointRouter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PointToPointRouter.cpp; sourceTree = "<group>"; };
-		5E0780E2240E14E2001AF38D /* DeliveryOptimizer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeliveryOptimizer.cpp; sourceTree = "<group>"; };
-		5E0780E5240E150D001AF38D /* DeliveryPlanner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeliveryPlanner.cpp; sourceTree = "<group>"; };
-		5E0780E7240E161A001AF38D /* support.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = support.cpp; sourceTree = "<group>"; };
-		5E0780E9240E16E5001AF38D /* report.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = report.txt; sourceTree = "<group>"; };
-		5E0780EB240F5E44001AF38D /* providedMyVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = providedMyVersion.h; sourceTree = "<group>"; };
+		5E3C9F0C2412C3AC00F6DDB8 /* support.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = support.h; sourceTree = "<group>"; };
+		5E3C9F0D2412C3AC00F6DDB8 /* DeliveryPlanner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DeliveryPlanner.cpp; sourceTree = "<group>"; };
+		5E3C9F0E2412C3AC00F6DDB8 /* report.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = report.txt; sourceTree = "<group>"; };
+		5E3C9F0F2412C3AC00F6DDB8 /* deliveries.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deliveries.txt; sourceTree = "<group>"; };
+		5E3C9F102412C3AC00F6DDB8 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5E3C9F112412C3AC00F6DDB8 /* provided.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = provided.h; sourceTree = "<group>"; };
+		5E3C9F122412C3AC00F6DDB8 /* StreetMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreetMap.cpp; sourceTree = "<group>"; };
+		5E3C9F132412C3AC00F6DDB8 /* DeliveryOptimizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DeliveryOptimizer.cpp; sourceTree = "<group>"; };
+		5E3C9F142412C3AC00F6DDB8 /* PointToPointRouter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointToPointRouter.cpp; sourceTree = "<group>"; };
+		5E3C9F152412C3AC00F6DDB8 /* mapdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mapdata.txt; sourceTree = "<group>"; };
+		5E3C9F162412C3AC00F6DDB8 /* ExpandableHashMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandableHashMap.h; sourceTree = "<group>"; };
+		5E3C9F172412C3AC00F6DDB8 /* support.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = support.cpp; sourceTree = "<group>"; };
 		5E3F2FFA240CFCB9009FB567 /* GooberEats */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GooberEats; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E3F2FFD240CFCB9009FB567 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		5E3F3004240CFD06009FB567 /* ExpandableHashMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpandableHashMap.h; sourceTree = "<group>"; };
-		5E3F3005240CFE34009FB567 /* support.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = support.h; sourceTree = "<group>"; };
-		5ED0F06224108D92006013B5 /* mapdata.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = mapdata.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,17 +73,18 @@
 		5E3F2FFC240CFCB9009FB567 /* GooberEats */ = {
 			isa = PBXGroup;
 			children = (
-				5E3F2FFD240CFCB9009FB567 /* main.cpp */,
-				5E3F3004240CFD06009FB567 /* ExpandableHashMap.h */,
-				5E0780D9240E140A001AF38D /* StreetMap.h */,
-				5E0780DC240E14AB001AF38D /* PointToPointRouter.cpp */,
-				5E0780E2240E14E2001AF38D /* DeliveryOptimizer.cpp */,
-				5E0780E5240E150D001AF38D /* DeliveryPlanner.cpp */,
-				5ED0F06224108D92006013B5 /* mapdata.txt */,
-				5E3F3005240CFE34009FB567 /* support.h */,
-				5E0780E7240E161A001AF38D /* support.cpp */,
-				5E0780E9240E16E5001AF38D /* report.txt */,
-				5E0780EB240F5E44001AF38D /* providedMyVersion.h */,
+				5E3C9F102412C3AC00F6DDB8 /* main.cpp */,
+				5E3C9F112412C3AC00F6DDB8 /* provided.h */,
+				5E3C9F162412C3AC00F6DDB8 /* ExpandableHashMap.h */,
+				5E3C9F122412C3AC00F6DDB8 /* StreetMap.cpp */,
+				5E3C9F142412C3AC00F6DDB8 /* PointToPointRouter.cpp */,
+				5E3C9F132412C3AC00F6DDB8 /* DeliveryOptimizer.cpp */,
+				5E3C9F0D2412C3AC00F6DDB8 /* DeliveryPlanner.cpp */,
+				5E3C9F0F2412C3AC00F6DDB8 /* deliveries.txt */,
+				5E3C9F152412C3AC00F6DDB8 /* mapdata.txt */,
+				5E3C9F0E2412C3AC00F6DDB8 /* report.txt */,
+				5E3C9F0C2412C3AC00F6DDB8 /* support.h */,
+				5E3C9F172412C3AC00F6DDB8 /* support.cpp */,
 			);
 			path = GooberEats;
 			sourceTree = "<group>";
@@ -144,12 +146,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E3F2FFE240CFCB9009FB567 /* main.cpp in Sources */,
-				5E0780E3240E14E2001AF38D /* DeliveryOptimizer.cpp in Sources */,
-				5E0780DA240E140A001AF38D /* StreetMap.h in Sources */,
-				5E0780E6240E150D001AF38D /* DeliveryPlanner.cpp in Sources */,
-				5E0780DD240E14AB001AF38D /* PointToPointRouter.cpp in Sources */,
-				5E0780E8240E161A001AF38D /* support.cpp in Sources */,
+				5E3C9F1A2412C3AC00F6DDB8 /* StreetMap.cpp in Sources */,
+				5E3C9F1B2412C3AC00F6DDB8 /* DeliveryOptimizer.cpp in Sources */,
+				5E3C9F1C2412C3AC00F6DDB8 /* PointToPointRouter.cpp in Sources */,
+				5E3C9F1D2412C3AC00F6DDB8 /* support.cpp in Sources */,
+				5E3C9F192412C3AC00F6DDB8 /* main.cpp in Sources */,
+				5E3C9F182412C3AC00F6DDB8 /* DeliveryPlanner.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
