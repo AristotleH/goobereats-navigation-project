@@ -13,7 +13,8 @@ public:
         vector<DeliveryCommand>& commands,
         double& totalDistanceTravelled) const;
 private:
-    const StreetMap* STREET_MAP;
+    DeliveryOptimizer optimizer;
+    PointToPointRouter pathfinder;
     
     void addCommands(const list<StreetSegment>& segments, vector<DeliveryCommand>& commands) const;
     string cardinalDirection(const StreetSegment& segment) const;
@@ -21,7 +22,7 @@ private:
 };
 
 DeliveryPlannerImpl::DeliveryPlannerImpl(const StreetMap* sm)
-    : STREET_MAP(sm)
+    : optimizer(sm), pathfinder(sm)
 {
 }
 
@@ -35,11 +36,10 @@ DeliveryResult DeliveryPlannerImpl::generateDeliveryPlan(
     vector<DeliveryCommand>& commands,
     double& totalDistanceTravelled) const
 {
-    DeliveryOptimizer simAnnealing(STREET_MAP);
     vector<DeliveryRequest> optimizedDeliveries = deliveries;
     double notUsed1;
     double notUsed2;
-    simAnnealing.optimizeDeliveryOrder(depot, optimizedDeliveries, notUsed1, notUsed2);
+    optimizer.optimizeDeliveryOrder(depot, optimizedDeliveries, notUsed1, notUsed2);
     
     list<StreetSegment> deliveryRoute;
     double deliveryDistance;
@@ -47,8 +47,6 @@ DeliveryResult DeliveryPlannerImpl::generateDeliveryPlan(
     DeliveryCommand routeFinished;
     totalDistanceTravelled = 0;
     DeliveryResult result;
-    
-    PointToPointRouter pathfinder(STREET_MAP);
     
     GeoCoord startCoord = depot;
     GeoCoord endCoord;
