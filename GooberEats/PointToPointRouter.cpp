@@ -51,8 +51,7 @@ public:
 private:
     const StreetMap* STREET_MAP;
     
-    void constructPath(const MapNode* node, const GeoCoord& start,
-                       list<StreetSegment>& route, double& distance) const;
+    void constructPath(const MapNode* node, list<StreetSegment>& route, double& distance) const;
     void deleteMapNodes(list<MapNode*>& nodes) const;
 };
 
@@ -93,8 +92,8 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
     if (!route.empty())
         route.clear();
     
-    if (!STREET_MAP->getSegmentsThatStartWith(end, connectingSegments)  &&
-        !STREET_MAP->getSegmentsThatStartWith(start, connectingSegments))
+    if (!STREET_MAP->getSegmentsThatStartWith(start, connectingSegments)  &&
+        !STREET_MAP->getSegmentsThatStartWith(end, connectingSegments))
     {
         result = BAD_COORD;
     }
@@ -130,14 +129,13 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
         }
     }
     if (result == DELIVERY_SUCCESS)
-        constructPath(current, start, route, totalDistanceTravelled);
+        constructPath(current, route, totalDistanceTravelled);
     
     deleteMapNodes(allMapNodes);
     return result;
 }
 
-void PointToPointRouterImpl::constructPath(const MapNode* node, const GeoCoord& start,
-                                           list<StreetSegment>& route, double& distance) const
+void PointToPointRouterImpl::constructPath(const MapNode* node, list<StreetSegment>& route, double& distance) const
 {
     distance = 0;
     while (node->m_prevNode != nullptr)

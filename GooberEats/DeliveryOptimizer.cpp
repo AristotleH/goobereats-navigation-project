@@ -42,8 +42,10 @@ void DeliveryOptimizerImpl::optimizeDeliveryOrder(
     vector<DeliveryRequest> lowest = current;
     vector<DeliveryRequest> modified;
     
-    double temperature = current.size() * 5000;
+    double temperature = pow(current.size(), 2);
     double pctHeatRetained = 0.9;
+    const int MAX_LOOPS_TEMP = 100;
+    int numLoopsForTemp = MAX_LOOPS_TEMP;
     
     std::default_random_engine generator;
     std::shuffle(std::begin(current), std::end(current), generator);
@@ -67,7 +69,13 @@ void DeliveryOptimizerImpl::optimizeDeliveryOrder(
             lowest = current = modified;
         else if (exp((currentEnergy - modifiedEnergy) / temperature) > randZeroToOne(generator))
             current = modified;
-        temperature *= pctHeatRetained;
+       
+        numLoopsForTemp--;
+        if (numLoopsForTemp < 1)
+        {
+            temperature *= pctHeatRetained;
+            numLoopsForTemp = MAX_LOOPS_TEMP;
+        }
     }
     
     if (getCrowDistance(current, depot) < oldCrowDistance)
