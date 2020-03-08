@@ -1672,6 +1672,40 @@
 			<key>uniqueIdentifier</key>
 			<string>5333E3F3-B81F-4C1C-A1A8-50EAB50C239D</string>
 		</dict>
+		<key>55EACB6E-E75B-468A-9FFC-4B9CD6634DCC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>55EACB6E-E75B-468A-9FFC-4B9CD6634DCC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605351237.49520802</real>
+			<key>timeStoppedRecording</key>
+			<real>605351237.61017799</real>
+			<key>title</key>
+			<string>Build GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>55EACB6E-E75B-468A-9FFC-4B9CD6634DCC</string>
+		</dict>
 		<key>570711EC-EDD0-446A-97EE-F09640400643</key>
 		<dict>
 			<key>className</key>
