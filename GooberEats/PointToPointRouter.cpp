@@ -84,16 +84,13 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
     double g = 0.0;
     double h = distanceEarthMiles(start, end);
     
-    cerr << "Now using A*..." << endl << endl;
-    
     MapNode* current = new MapNode(allMapNodes, start, nullptr, nullptr, g, h);
     open.push(current);
     
     MapNode* next;
     
-    STREET_MAP->getSegmentsThatStartWith(GeoCoord("34.0661429", "-118.4475222"), connectingSegments);
-    for (auto it = connectingSegments.begin(); it != connectingSegments.end(); ++it)
-        cerr << it->end.latitudeText << ", " << it->end.longitudeText << endl;
+    if (!route.empty())
+        route.clear();
     
     if (!STREET_MAP->getSegmentsThatStartWith(end, connectingSegments)  &&
         !STREET_MAP->getSegmentsThatStartWith(start, connectingSegments))
@@ -128,21 +125,15 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
                                    g,
                                    h);
                 open.push(next);
-                
-                cerr << it->end.latitudeText << ", " << it->end.longitudeText << endl;//"; Distance is " << g + h << endl;
-                //cerr << "\tNext node: " << open.top()->m_coord.latitudeText << ", " << open.top()->m_coord.longitudeText << "; Distance to goal is " << h << endl;
-                //cerr << "Distance is " << fScore(next) << endl;
-                //cerr << "Top of queue is " << fScore(open.top()) << endl;
             }
         }
     }
     if (result == DELIVERY_SUCCESS)
         constructPath(current, start, route, totalDistanceTravelled);
     
-    cerr << "Route found!" << endl;
-    
     for (auto it = route.begin(); it != route.end(); ++it)
-        cerr << it->end.latitudeText << ", " << it->end.longitudeText << endl;
+        cerr << it->start.latitudeText << ", " << it->start.longitudeText << endl;
+    cerr << endl << endl << endl << endl;
     
     deleteMapNodes(allMapNodes);
     return result;

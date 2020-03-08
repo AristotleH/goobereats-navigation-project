@@ -12,8 +12,6 @@
 #include <list>
 #include <iostream>
 
-#include "support.h"
-
 // ExpandableHashMap.h
 
 // Skeleton for the ExpandableHashMap class template.  You must implement the first six

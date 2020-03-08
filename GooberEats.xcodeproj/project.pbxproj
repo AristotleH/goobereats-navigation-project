@@ -12,7 +12,6 @@
 		5E3C9F1A2412C3AC00F6DDB8 /* StreetMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9F122412C3AC00F6DDB8 /* StreetMap.cpp */; };
 		5E3C9F1B2412C3AC00F6DDB8 /* DeliveryOptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9F132412C3AC00F6DDB8 /* DeliveryOptimizer.cpp */; };
 		5E3C9F1C2412C3AC00F6DDB8 /* PointToPointRouter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9F142412C3AC00F6DDB8 /* PointToPointRouter.cpp */; };
-		5E3C9F1D2412C3AC00F6DDB8 /* support.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C9F172412C3AC00F6DDB8 /* support.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +27,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5E3C9F0C2412C3AC00F6DDB8 /* support.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = support.h; sourceTree = "<group>"; };
 		5E3C9F0D2412C3AC00F6DDB8 /* DeliveryPlanner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DeliveryPlanner.cpp; sourceTree = "<group>"; };
 		5E3C9F0E2412C3AC00F6DDB8 /* report.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = report.txt; sourceTree = "<group>"; };
 		5E3C9F0F2412C3AC00F6DDB8 /* deliveries.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deliveries.txt; sourceTree = "<group>"; };
@@ -39,8 +37,8 @@
 		5E3C9F142412C3AC00F6DDB8 /* PointToPointRouter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointToPointRouter.cpp; sourceTree = "<group>"; };
 		5E3C9F152412C3AC00F6DDB8 /* mapdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mapdata.txt; sourceTree = "<group>"; };
 		5E3C9F162412C3AC00F6DDB8 /* ExpandableHashMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandableHashMap.h; sourceTree = "<group>"; };
-		5E3C9F172412C3AC00F6DDB8 /* support.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = support.cpp; sourceTree = "<group>"; };
 		5E3F2FFA240CFCB9009FB567 /* GooberEats */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GooberEats; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E8D7CD02414C86D00A65AA0 /* deliveries strange behavior.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "deliveries strange behavior.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +79,9 @@
 				5E3C9F132412C3AC00F6DDB8 /* DeliveryOptimizer.cpp */,
 				5E3C9F0D2412C3AC00F6DDB8 /* DeliveryPlanner.cpp */,
 				5E3C9F0F2412C3AC00F6DDB8 /* deliveries.txt */,
+				5E8D7CD02414C86D00A65AA0 /* deliveries strange behavior.txt */,
 				5E3C9F152412C3AC00F6DDB8 /* mapdata.txt */,
 				5E3C9F0E2412C3AC00F6DDB8 /* report.txt */,
-				5E3C9F0C2412C3AC00F6DDB8 /* support.h */,
-				5E3C9F172412C3AC00F6DDB8 /* support.cpp */,
 			);
 			path = GooberEats;
 			sourceTree = "<group>";
@@ -149,7 +146,6 @@
 				5E3C9F1A2412C3AC00F6DDB8 /* StreetMap.cpp in Sources */,
 				5E3C9F1B2412C3AC00F6DDB8 /* DeliveryOptimizer.cpp in Sources */,
 				5E3C9F1C2412C3AC00F6DDB8 /* PointToPointRouter.cpp in Sources */,
-				5E3C9F1D2412C3AC00F6DDB8 /* support.cpp in Sources */,
 				5E3C9F192412C3AC00F6DDB8 /* main.cpp in Sources */,
 				5E3C9F182412C3AC00F6DDB8 /* DeliveryPlanner.cpp in Sources */,
 			);
