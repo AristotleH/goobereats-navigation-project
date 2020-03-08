@@ -16,19 +16,26 @@ struct MapNode
     {
         nodeList.push_back(this);
     }
+    ~MapNode()
+    {
+        delete m_prevSegment;
+    }
 };
 
 inline
-double fScore(double gScore, double hScore)
+double fScore(const MapNode* node)
 {
-    return gScore + hScore;
+    return node->m_gScore + node->m_hScore;
 }
 
-bool operator<(const MapNode& lhs, const MapNode& rhs)
+struct MapNodePtrComparator
 {
-    //greater than and not less than because MapNodes with least f-score are prioritized
-    return (fScore(lhs.m_gScore, lhs.m_hScore) > fScore(rhs.m_gScore, rhs.m_hScore));
-}
+    bool operator() (const MapNode* lhs, const MapNode* rhs)
+    {
+        //greater than and not less than because MapNodes with least f-score are prioritized
+        return (fScore(lhs) > fScore(rhs));
+    }
+};
 
 class PointToPointRouterImpl
 {
@@ -67,8 +74,9 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
         double& totalDistanceTravelled) const
 {
     list<MapNode*> allMapNodes;
-    priority_queue<MapNode*> open;
+    priority_queue<MapNode*, vector<MapNode*>, MapNodePtrComparator> open;
     set<GeoCoord> closed;
+    
     vector<StreetSegment> connectingSegments;
     DeliveryResult result = NO_ROUTE;
     //pointer to reference, which is just the reference refers to and not the reference itself
@@ -83,6 +91,10 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
     
     MapNode* next;
     
+    STREET_MAP->getSegmentsThatStartWith(GeoCoord("34.0661429", "-118.4475222"), connectingSegments);
+    for (auto it = connectingSegments.begin(); it != connectingSegments.end(); ++it)
+        cerr << it->end.latitudeText << ", " << it->end.longitudeText << endl;
+    
     if (!STREET_MAP->getSegmentsThatStartWith(end, connectingSegments)  &&
         !STREET_MAP->getSegmentsThatStartWith(start, connectingSegments))
     {
@@ -94,8 +106,9 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
         {
             current = open.top();
             open.pop();
+            closed.insert(current->m_coord);
             
-            if (current->m_hScore == 0)
+            if (current->m_coord == end)
             {
                 result = DELIVERY_SUCCESS;
                 break;
@@ -105,19 +118,32 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
             {
                 if (closed.find(it->end) != closed.end())
                     continue;
-                
-                cerr << it->end.latitudeText << ", " << it->end.longitudeText << endl;
-                
-                g = current->m_gScore + distanceEarthMiles(current->m_coord, it->end);
+                g = current->m_gScore + distanceEarthMiles(it->start, it->end);
                 h = distanceEarthMiles(it->end, end);
-                next = new MapNode(allMapNodes, it->end, current, &(*it), g, h);
+                
+                next = new MapNode(allMapNodes,
+                                   it->end,
+                                   current,
+                                   new StreetSegment(it->start, it->end, it->name),
+                                   g,
+                                   h);
                 open.push(next);
+                
+                cerr << it->end.latitudeText << ", " << it->end.longitudeText << endl;//"; Distance is " << g + h << endl;
+                //cerr << "\tNext node: " << open.top()->m_coord.latitudeText << ", " << open.top()->m_coord.longitudeText << "; Distance to goal is " << h << endl;
+                //cerr << "Distance is " << fScore(next) << endl;
+                //cerr << "Top of queue is " << fScore(open.top()) << endl;
             }
-            closed.insert(current->m_coord);
         }
     }
     if (result == DELIVERY_SUCCESS)
         constructPath(current, start, route, totalDistanceTravelled);
+    
+    cerr << "Route found!" << endl;
+    
+    for (auto it = route.begin(); it != route.end(); ++it)
+        cerr << it->end.latitudeText << ", " << it->end.longitudeText << endl;
+    
     deleteMapNodes(allMapNodes);
     return result;
 }

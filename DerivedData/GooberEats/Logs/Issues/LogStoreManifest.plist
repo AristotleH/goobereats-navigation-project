@@ -6,6 +6,34 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>1895DF1E-2FB1-47B5-89A1-D20F2B6DE79A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
+			<key>fileName</key>
+			<string>1895DF1E-2FB1-47B5-89A1-D20F2B6DE79A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>GooberEats-gczddfqyneagcdejkacmjglkwkcr</string>
+			<key>timeStartedRecording</key>
+			<real>605337231.22830701</real>
+			<key>timeStoppedRecording</key>
+			<real>605337232.01759303</real>
+			<key>title</key>
+			<string>Build target GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>1895DF1E-2FB1-47B5-89A1-D20F2B6DE79A</string>
+		</dict>
 		<key>48C4F003-E5D2-4F0A-9826-17A29874AAB3</key>
 		<dict>
 			<key>className</key>
@@ -33,34 +61,6 @@
 			<string>Build target GooberEats</string>
 			<key>uniqueIdentifier</key>
 			<string>48C4F003-E5D2-4F0A-9826-17A29874AAB3</string>
-		</dict>
-		<key>B4B6246F-39DD-4037-AAD4-8F3955D07909</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
-			<key>fileName</key>
-			<string>B4B6246F-39DD-4037-AAD4-8F3955D07909.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>GooberEats-gczddfqyneagcdejkacmjglkwkcr</string>
-			<key>timeStartedRecording</key>
-			<real>605316965.24012995</real>
-			<key>timeStoppedRecording</key>
-			<real>605316966.117419</real>
-			<key>title</key>
-			<string>Build target GooberEats</string>
-			<key>uniqueIdentifier</key>
-			<string>B4B6246F-39DD-4037-AAD4-8F3955D07909</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

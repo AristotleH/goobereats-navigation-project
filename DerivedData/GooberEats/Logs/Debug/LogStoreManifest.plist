@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>010E0216-9172-4E06-BA54-526088C69F0D</key>
+		<key>09F4C806-8F92-4947-B2CE-FB93C4CB7C27</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>010E0216-9172-4E06-BA54-526088C69F0D.xcactivitylog</string>
+			<string>09F4C806-8F92-4947-B2CE-FB93C4CB7C27.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,15 +32,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605316135.96725094</real>
+			<real>605335093.18810797</real>
 			<key>timeStoppedRecording</key>
-			<real>605316137.23543894</real>
+			<real>605335094.72650099</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>010E0216-9172-4E06-BA54-526088C69F0D</string>
+			<string>09F4C806-8F92-4947-B2CE-FB93C4CB7C27</string>
 		</dict>
-		<key>151BC88D-2C2A-4D6C-84A7-4993A453D8B6</key>
+		<key>3B0CE672-C571-46BC-933A-FEEC667C40A5</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>151BC88D-2C2A-4D6C-84A7-4993A453D8B6.xcactivitylog</string>
+			<string>3B0CE672-C571-46BC-933A-FEEC667C40A5.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,15 +66,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605316653.73152602</real>
+			<real>605337102.86357498</real>
 			<key>timeStoppedRecording</key>
-			<real>605316654.95992696</real>
+			<real>605337104.32710898</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>151BC88D-2C2A-4D6C-84A7-4993A453D8B6</string>
+			<string>3B0CE672-C571-46BC-933A-FEEC667C40A5</string>
 		</dict>
-		<key>1F30113E-021A-4626-B800-E6F7651B3E4C</key>
+		<key>54CF0146-6765-4159-A8B3-BF24B24675F7</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -83,7 +83,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>1F30113E-021A-4626-B800-E6F7651B3E4C.xcactivitylog</string>
+			<string>54CF0146-6765-4159-A8B3-BF24B24675F7.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -100,15 +100,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605315770.99278903</real>
+			<real>605335079.97555399</real>
 			<key>timeStoppedRecording</key>
-			<real>605315772.16957605</real>
+			<real>605335081.50207102</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>1F30113E-021A-4626-B800-E6F7651B3E4C</string>
+			<string>54CF0146-6765-4159-A8B3-BF24B24675F7</string>
 		</dict>
-		<key>28983ED1-14C4-4629-8D67-F41127235EFE</key>
+		<key>914EFCB2-5941-4991-A68A-56B2D1AF0D13</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -117,7 +117,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>28983ED1-14C4-4629-8D67-F41127235EFE.xcactivitylog</string>
+			<string>914EFCB2-5941-4991-A68A-56B2D1AF0D13.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -134,15 +134,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605316648.17203498</real>
+			<real>605334509.55940104</real>
 			<key>timeStoppedRecording</key>
-			<real>605316649.36212397</real>
+			<real>605334516.27834105</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>28983ED1-14C4-4629-8D67-F41127235EFE</string>
+			<string>914EFCB2-5941-4991-A68A-56B2D1AF0D13</string>
 		</dict>
-		<key>2A2D9BC4-B86E-48BF-A446-EC798DF8A9B6</key>
+		<key>A161859C-DF96-4D3A-9218-E629C88D6847</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -151,7 +151,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>2A2D9BC4-B86E-48BF-A446-EC798DF8A9B6.xcactivitylog</string>
+			<string>A161859C-DF96-4D3A-9218-E629C88D6847.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -168,15 +168,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605316000.33545101</real>
+			<real>605337128.47140598</real>
 			<key>timeStoppedRecording</key>
-			<real>605316001.49899495</real>
+			<real>605337129.92498302</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>2A2D9BC4-B86E-48BF-A446-EC798DF8A9B6</string>
+			<string>A161859C-DF96-4D3A-9218-E629C88D6847</string>
 		</dict>
-		<key>45AA0CB9-3C38-4BB7-8022-92E8C910F2C5</key>
+		<key>A3DEBA1B-A76D-4612-BB06-79CFA45E8F90</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -185,7 +185,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>45AA0CB9-3C38-4BB7-8022-92E8C910F2C5.xcactivitylog</string>
+			<string>A3DEBA1B-A76D-4612-BB06-79CFA45E8F90.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -202,15 +202,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605315886.43290603</real>
+			<real>605335056.87369204</real>
 			<key>timeStoppedRecording</key>
-			<real>605315887.60133195</real>
+			<real>605335058.376037</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>45AA0CB9-3C38-4BB7-8022-92E8C910F2C5</string>
+			<string>A3DEBA1B-A76D-4612-BB06-79CFA45E8F90</string>
 		</dict>
-		<key>4C6811D3-EFBA-428D-A44D-A1E8D8C53160</key>
+		<key>AC979E7B-58A4-4738-A227-3BD7D86420D0</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -219,7 +219,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>4C6811D3-EFBA-428D-A44D-A1E8D8C53160.xcactivitylog</string>
+			<string>AC979E7B-58A4-4738-A227-3BD7D86420D0.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -236,15 +236,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605314995.36844695</real>
+			<real>605334643.38814497</real>
 			<key>timeStoppedRecording</key>
-			<real>605314996.46445298</real>
+			<real>605334644.85655999</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>4C6811D3-EFBA-428D-A44D-A1E8D8C53160</string>
+			<string>AC979E7B-58A4-4738-A227-3BD7D86420D0</string>
 		</dict>
-		<key>4E1D667A-972C-44C8-90F7-221FC85651C3</key>
+		<key>ADFF733B-C658-41D6-87CB-5B81B3B5C5F6</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -253,7 +253,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>4E1D667A-972C-44C8-90F7-221FC85651C3.xcactivitylog</string>
+			<string>ADFF733B-C658-41D6-87CB-5B81B3B5C5F6.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -270,15 +270,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605315907.14127004</real>
+			<real>605337232.02562499</real>
 			<key>timeStoppedRecording</key>
-			<real>605315908.34100902</real>
+			<real>605337233.29911697</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>4E1D667A-972C-44C8-90F7-221FC85651C3</string>
+			<string>ADFF733B-C658-41D6-87CB-5B81B3B5C5F6</string>
 		</dict>
-		<key>52BA86DD-B6F1-4465-B8E8-884CD684181B</key>
+		<key>BD931600-E957-4A9F-9F67-220A35F01865</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -287,7 +287,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>52BA86DD-B6F1-4465-B8E8-884CD684181B.xcactivitylog</string>
+			<string>BD931600-E957-4A9F-9F67-220A35F01865.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -304,15 +304,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605314937.31535304</real>
+			<real>605335134.99031496</real>
 			<key>timeStoppedRecording</key>
-			<real>605314938.52291405</real>
+			<real>605335136.12694299</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>52BA86DD-B6F1-4465-B8E8-884CD684181B</string>
+			<string>BD931600-E957-4A9F-9F67-220A35F01865</string>
 		</dict>
-		<key>8BE8E0F4-C749-4198-AA0B-4CA1A997BB18</key>
+		<key>C63D98CF-3D64-4E52-8C52-79227600DC7D</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -321,7 +321,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>8BE8E0F4-C749-4198-AA0B-4CA1A997BB18.xcactivitylog</string>
+			<string>C63D98CF-3D64-4E52-8C52-79227600DC7D.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -338,15 +338,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605316439.07125795</real>
+			<real>605335607.84346402</real>
 			<key>timeStoppedRecording</key>
-			<real>605316440.30978405</real>
+			<real>605335609.03825402</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>8BE8E0F4-C749-4198-AA0B-4CA1A997BB18</string>
+			<string>C63D98CF-3D64-4E52-8C52-79227600DC7D</string>
 		</dict>
-		<key>907704CE-C38B-49F6-9713-F2075EA61A44</key>
+		<key>C9EF6086-D12F-4744-AFAD-187028334D1C</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -355,7 +355,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>907704CE-C38B-49F6-9713-F2075EA61A44.xcactivitylog</string>
+			<string>C9EF6086-D12F-4744-AFAD-187028334D1C.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -372,15 +372,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605314875.434569</real>
+			<real>605334565.66900504</real>
 			<key>timeStoppedRecording</key>
-			<real>605314880.74336505</real>
+			<real>605334567.00437105</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>907704CE-C38B-49F6-9713-F2075EA61A44</string>
+			<string>C9EF6086-D12F-4744-AFAD-187028334D1C</string>
 		</dict>
-		<key>9584EAB8-D2E6-4054-B384-FC9BED61141D</key>
+		<key>EA1F437E-7866-4F1B-831C-E14C482C1685</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -389,7 +389,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>9584EAB8-D2E6-4054-B384-FC9BED61141D.xcactivitylog</string>
+			<string>EA1F437E-7866-4F1B-831C-E14C482C1685.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -406,15 +406,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605316966.12622702</real>
+			<real>605334271.96182203</real>
 			<key>timeStoppedRecording</key>
-			<real>605316967.31862402</real>
+			<real>605334273.32838404</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>9584EAB8-D2E6-4054-B384-FC9BED61141D</string>
+			<string>EA1F437E-7866-4F1B-831C-E14C482C1685</string>
 		</dict>
-		<key>ABD5F31B-662A-4CB6-B133-83652EB510DF</key>
+		<key>F208CC5F-2662-4F78-82E2-03F8A9903828</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -423,7 +423,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>ABD5F31B-662A-4CB6-B133-83652EB510DF.xcactivitylog</string>
+			<string>F208CC5F-2662-4F78-82E2-03F8A9903828.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -440,15 +440,15 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605316117.46500194</real>
+			<real>605334821.54402995</real>
 			<key>timeStoppedRecording</key>
-			<real>605316118.671893</real>
+			<real>605334822.87913203</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>ABD5F31B-662A-4CB6-B133-83652EB510DF</string>
+			<string>F208CC5F-2662-4F78-82E2-03F8A9903828</string>
 		</dict>
-		<key>CADE1621-1786-4F68-8E16-87CCCF35A9A4</key>
+		<key>F6C3DB8F-D083-41DE-B2B0-D970B8B54C89</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -457,7 +457,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>CADE1621-1786-4F68-8E16-87CCCF35A9A4.xcactivitylog</string>
+			<string>F6C3DB8F-D083-41DE-B2B0-D970B8B54C89.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -474,13 +474,13 @@
 			<key>signature</key>
 			<string>Debug GooberEats</string>
 			<key>timeStartedRecording</key>
-			<real>605314480.07251096</real>
+			<real>605334757.32043195</real>
 			<key>timeStoppedRecording</key>
-			<real>605314482.94220901</real>
+			<real>605334758.68563104</real>
 			<key>title</key>
 			<string>Debug GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>CADE1621-1786-4F68-8E16-87CCCF35A9A4</string>
+			<string>F6C3DB8F-D083-41DE-B2B0-D970B8B54C89</string>
 		</dict>
 	</dict>
 </dict>

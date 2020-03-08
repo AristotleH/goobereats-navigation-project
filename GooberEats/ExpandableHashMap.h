@@ -172,6 +172,7 @@ void ExpandableHashMap<KeyType, ValueType>::associate(const KeyType& key, const 
     // value is actually associated. if we were to add this check to expand at the beginning of this function,
     // we'd have to check if the pair passed into the function will replace an existing pair or be added as a new
     // pair, which would take more time.
+    
     if (static_cast<double>(m_numPairs)/m_numBuckets > MAX_LOAD)
         doubleBuckets();
 }
@@ -205,8 +206,8 @@ const ValueType* ExpandableHashMap<KeyType, ValueType>::find(const KeyType& key)
 template <typename KeyType, typename ValueType>
 unsigned int ExpandableHashMap<KeyType, ValueType>::getBucketNumber(const KeyType& key) const
 {
-    unsigned int hash(const KeyType& k); // prototype
-    unsigned int h = hash(key);
+    unsigned int hasher(const KeyType& k); // prototype
+    unsigned int h = hasher(key);
     return h % m_numBuckets;
 }
 

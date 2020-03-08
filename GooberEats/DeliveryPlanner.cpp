@@ -73,7 +73,6 @@ DeliveryResult DeliveryPlannerImpl::generateDeliveryPlan(
         
         startingCoord = endingCoord;
     }
-    
     result = pathfinder.generatePointToPointRoute(startingCoord,
                                                   depot,
                                                   routePerDelivery,
@@ -90,6 +89,7 @@ void DeliveryPlannerImpl::addCommands(const list<StreetSegment>& segments, vecto
     auto itPrevious = segments.begin();
     DeliveryCommand command;
     command.initAsProceedCommand(cardinalDirection(*itPrevious), itPrevious->name, 0);
+    
     for (auto itCurrent = segments.begin(); itCurrent != segments.end(); ++itCurrent)
     {
         if (itCurrent->name == itPrevious->name)
