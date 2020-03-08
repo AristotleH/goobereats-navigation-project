@@ -1,5 +1,8 @@
 #include "provided.h"
 #include <vector>
+#include <algorithm>
+#include <random>
+#include <utility>
 using namespace std;
 
 class DeliveryOptimizerImpl
@@ -12,9 +15,14 @@ public:
         vector<DeliveryRequest>& deliveries,
         double& oldCrowDistance,
         double& newCrowDistance) const;
+private:
+    const StreetMap* STREET_MAP;
+    
+    double getCrowDistance(const vector<DeliveryRequest>& deliveries, const GeoCoord& origin) const;
 };
 
 DeliveryOptimizerImpl::DeliveryOptimizerImpl(const StreetMap* sm)
+    : STREET_MAP(sm)
 {
 }
 
@@ -28,8 +36,59 @@ void DeliveryOptimizerImpl::optimizeDeliveryOrder(
     double& oldCrowDistance,
     double& newCrowDistance) const
 {
-    oldCrowDistance = 0;  // Delete these lines and implement this function correctly
-    newCrowDistance = 0;
+    oldCrowDistance = getCrowDistance(deliveries, depot);
+    
+    vector<DeliveryRequest> current = deliveries;
+    vector<DeliveryRequest> lowest = current;
+    vector<DeliveryRequest> modified;
+    
+    double temperature = current.size() * 5000;
+    double pctHeatRetained = 0.9;
+    
+    std::default_random_engine generator;
+    std::shuffle(std::begin(current), std::end(current), generator);
+    
+    std::uniform_int_distribution<> randVectorIndex(0, static_cast<int>(current.size() - 1));
+    std::uniform_real_distribution<double> randZeroToOne(0, 1);
+    double currentEnergy;
+    double modifiedEnergy;
+    
+    while (temperature > 1)
+    {
+        modified = current;
+        
+        iter_swap(modified.begin() + randVectorIndex(generator),
+                  modified.begin() + randVectorIndex(generator));
+        
+        currentEnergy = getCrowDistance(current, depot);
+        modifiedEnergy = getCrowDistance(modified, depot);
+        
+        if (modifiedEnergy < currentEnergy)
+            lowest = current = modified;
+        else if (exp((currentEnergy - modifiedEnergy) / temperature) > randZeroToOne(generator))
+            current = modified;
+        temperature *= pctHeatRetained;
+    }
+    
+    if (getCrowDistance(current, depot) < oldCrowDistance)
+        deliveries = current;
+    else if (getCrowDistance(lowest, depot) < oldCrowDistance)
+        deliveries = lowest;
+    
+    newCrowDistance = getCrowDistance(deliveries, depot);
+}
+
+double DeliveryOptimizerImpl::getCrowDistance(const vector<DeliveryRequest>& deliveries, const GeoCoord& origin) const
+{
+    double distance = 0;
+    GeoCoord previous = origin;
+    for (auto it = deliveries.begin(); it != deliveries.end(); ++it)
+    {
+        distance += distanceEarthMiles(previous, it->location);
+        previous = it->location;
+    }
+    distance += distanceEarthMiles(previous, origin);
+    return distance;
 }
 
 //******************** DeliveryOptimizer functions ****************************

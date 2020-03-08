@@ -8,17 +8,18 @@ struct MapNode
 {
     GeoCoord m_coord;
     MapNode* m_prevNode;
-    StreetSegment* m_prevSegment;
+    StreetSegment m_prevSegment;
     double m_gScore;
     double m_hScore;
-    MapNode(list<MapNode*> nodeList, GeoCoord coord, MapNode* prev, StreetSegment* prevSegment, double gScore, double hScore)
+    MapNode(list<MapNode*>* nodeList, GeoCoord coord, MapNode* prev, StreetSegment prevSegment, double gScore, double hScore)
         : m_coord(coord), m_prevNode(prev), m_prevSegment(prevSegment), m_gScore(gScore), m_hScore(hScore)
     {
-        nodeList.push_back(this);
+        nodeList->push_back(this);
     }
-    ~MapNode()
+    MapNode(list<MapNode*>* nodeList, GeoCoord coord, double hScore)
+        : m_coord(coord), m_prevNode(nullptr), m_prevSegment(StreetSegment()), m_gScore(0), m_hScore(hScore)
     {
-        delete m_prevSegment;
+        nodeList->push_back(this);
     }
 };
 
@@ -50,8 +51,8 @@ public:
 private:
     const StreetMap* STREET_MAP;
     
-    void constructPath(const MapNode* nodeStartSegment, const GeoCoord& start,
-                       list<StreetSegment>& route, double& totalDistanceTravelled) const;
+    void constructPath(const MapNode* node, const GeoCoord& start,
+                       list<StreetSegment>& route, double& distance) const;
     void deleteMapNodes(list<MapNode*>& nodes) const;
 };
 
@@ -84,7 +85,7 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
     double g = 0.0;
     double h = distanceEarthMiles(start, end);
     
-    MapNode* current = new MapNode(allMapNodes, start, nullptr, nullptr, g, h);
+    MapNode* current = new MapNode(&allMapNodes, start, h);
     open.push(current);
     
     MapNode* next;
@@ -118,10 +119,10 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
                 g = current->m_gScore + distanceEarthMiles(it->start, it->end);
                 h = distanceEarthMiles(it->end, end);
                 
-                next = new MapNode(allMapNodes,
+                next = new MapNode(&allMapNodes,
                                    it->end,
                                    current,
-                                   new StreetSegment(it->start, it->end, it->name),
+                                   StreetSegment(it->start, it->end, it->name),
                                    g,
                                    h);
                 open.push(next);
@@ -131,25 +132,19 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
     if (result == DELIVERY_SUCCESS)
         constructPath(current, start, route, totalDistanceTravelled);
     
-    for (auto it = route.begin(); it != route.end(); ++it)
-        cerr << it->start.latitudeText << ", " << it->start.longitudeText << endl;
-    cerr << endl << endl << endl << endl;
-    
     deleteMapNodes(allMapNodes);
     return result;
 }
 
-void PointToPointRouterImpl::constructPath(const MapNode* nodeStartSegment, const GeoCoord& start,
-                                           list<StreetSegment>& route, double& totalDistanceTravelled) const
+void PointToPointRouterImpl::constructPath(const MapNode* node, const GeoCoord& start,
+                                           list<StreetSegment>& route, double& distance) const
 {
-    totalDistanceTravelled = 0;
-    while (!(nodeStartSegment->m_coord == start))
+    distance = 0;
+    while (node->m_prevNode != nullptr)
     {
-        route.push_front(*(nodeStartSegment->m_prevSegment));
-        totalDistanceTravelled += distanceEarthMiles(
-            nodeStartSegment->m_prevSegment->start,
-            nodeStartSegment->m_prevSegment->end);
-        nodeStartSegment = nodeStartSegment->m_prevNode;
+        route.push_front(node->m_prevSegment);
+        distance += distanceEarthMiles( node->m_prevSegment.start, node->m_prevSegment.end);
+        node = node->m_prevNode;
     }
 }
 

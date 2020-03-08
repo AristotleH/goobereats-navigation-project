@@ -35,43 +35,46 @@ DeliveryResult DeliveryPlannerImpl::generateDeliveryPlan(
     vector<DeliveryCommand>& commands,
     double& totalDistanceTravelled) const
 {
-    list<StreetSegment> routePerDelivery;
-    DeliveryCommand routeFinished;
+    DeliveryOptimizer simAnnealing(STREET_MAP);
+    vector<DeliveryRequest> optimizedDeliveries = deliveries;
+    double notUsed1;
+    double notUsed2;
+    simAnnealing.optimizeDeliveryOrder(depot, optimizedDeliveries, notUsed1, notUsed2);
     
-    double distancePerDelivery;
+    list<StreetSegment> deliveryRoute;
+    double deliveryDistance;
+    
+    DeliveryCommand routeFinished;
     totalDistanceTravelled = 0;
     DeliveryResult result;
     
     PointToPointRouter pathfinder(STREET_MAP);
     
-    GeoCoord startingCoord = depot;
-    GeoCoord endingCoord;
+    GeoCoord startCoord = depot;
+    GeoCoord endCoord;
     
-    for (auto it = deliveries.begin(); it != deliveries.end(); ++it)
+    for (auto it = optimizedDeliveries.begin(); it != optimizedDeliveries.end(); ++it)
     {
-        endingCoord = it->location;
+        endCoord = it->location;
         
-        result = pathfinder.generatePointToPointRoute(startingCoord,
-                                                      endingCoord,
-                                                      routePerDelivery,
-                                                      distancePerDelivery);
+        result = pathfinder.generatePointToPointRoute(startCoord,
+                                                      endCoord,
+                                                      deliveryRoute,
+                                                      deliveryDistance);
         if (result != DELIVERY_SUCCESS)
             return result;
         
-        totalDistanceTravelled += distancePerDelivery;
+        totalDistanceTravelled += deliveryDistance;
+        addCommands(deliveryRoute, commands);
         
-        addCommands(routePerDelivery, commands);
         routeFinished.initAsDeliverCommand(it->item);
         commands.push_back(routeFinished);
         
-        startingCoord = endingCoord;
+        startCoord = endCoord;
     }
-    result = pathfinder.generatePointToPointRoute(startingCoord,
-                                                  depot,
-                                                  routePerDelivery,
-                                                  distancePerDelivery);
-    totalDistanceTravelled += distancePerDelivery;
-    addCommands(routePerDelivery, commands);
+    result = pathfinder.generatePointToPointRoute(startCoord, depot, deliveryRoute, deliveryDistance);
+    totalDistanceTravelled += deliveryDistance;
+    addCommands(deliveryRoute, commands);
     
     return result;
 }
@@ -85,22 +88,22 @@ void DeliveryPlannerImpl::addCommands(const list<StreetSegment>& segments, vecto
     for (auto itCurrent = segments.begin(); itCurrent != segments.end(); ++itCurrent)
     {
         if (itCurrent->name == itPrevious->name)
-        {
             command.increaseDistance(distanceEarthMiles(itCurrent->start, itCurrent->end));
-            continue;
-        }
-        commands.push_back(command);
-        
-        string turnToTake;
-        if (streetRequiresTurn(*itPrevious, *itCurrent, turnToTake))
+        else
         {
-            command.initAsTurnCommand(turnToTake, itCurrent->name);
             commands.push_back(command);
+            
+            string turnToTake;
+            if (streetRequiresTurn(*itPrevious, *itCurrent, turnToTake))
+            {
+                command.initAsTurnCommand(turnToTake, itCurrent->name);
+                commands.push_back(command);
+            }
+            
+            command.initAsProceedCommand(cardinalDirection(*itCurrent),
+                                         itCurrent->name,
+                                         distanceEarthMiles(itCurrent->start, itCurrent->end));
         }
-        
-        command.initAsProceedCommand(cardinalDirection(*itCurrent), 
-                                     itCurrent->name,
-                                     distanceEarthMiles(itCurrent->start, itCurrent->end));
         itPrevious = itCurrent;
     }
     commands.push_back(command);
@@ -132,19 +135,14 @@ bool DeliveryPlannerImpl::streetRequiresTurn(const StreetSegment& seg1, const St
 {
     double dir = angleBetween2Lines(seg1, seg2);
     
-    cerr << seg1.name << " to " << seg2.name << " is " << dir << endl;;
+    if (dir < 1  ||  dir > 359)
+        return false;
     
     if (dir >= 1  &&  dir < 180)
-    {
         direction = "left";
-        return true;
-    }
-    else if (dir >= 180  &&  dir <= 359)
-    {
+    else
         direction = "right";
-        return true;
-    }
-    return false;
+    return true;
 }
 
 //******************** DeliveryPlanner functions ******************************
