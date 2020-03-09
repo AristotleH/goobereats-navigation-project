@@ -71,6 +71,7 @@ DeliveryResult DeliveryPlannerImpl::generateDeliveryPlan(
         startCoord = endCoord;
     }
     result = pathfinder.generatePointToPointRoute(startCoord, depot, deliveryRoute, deliveryDistance);
+    
     totalDistanceTravelled += deliveryDistance;
     addCommands(deliveryRoute, commands);
     
@@ -104,7 +105,8 @@ void DeliveryPlannerImpl::addCommands(const list<StreetSegment>& segments, vecto
         }
         itPrevious = itCurrent;
     }
-    commands.push_back(command);
+    if (!segments.empty())
+        commands.push_back(command);
 }
 
 string DeliveryPlannerImpl::cardinalDirection(const StreetSegment& segment) const

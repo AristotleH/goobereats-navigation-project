@@ -2,7 +2,6 @@
 #include "ExpandableHashMap.h"
 #include <string>
 #include <vector>
-#include <set>
 #include <functional>
 #include <iostream>
 #include <fstream>
@@ -32,7 +31,7 @@ public:
     bool getSegmentsThatStartWith(const GeoCoord& gc, vector<StreetSegment>& segs) const;
 private:
     ExpandableHashMap<GeoCoord, std::vector<StreetSegment*>> coordToSegments;
-    std::set<StreetSegment*> allSegments;
+    std::list<StreetSegment*> allSegments;
     
     void addSegment(StreetSegment* segment);
     StreetSegment* reverse(const StreetSegment* original);
@@ -108,7 +107,7 @@ bool StreetMapImpl::getSegmentsThatStartWith(const GeoCoord& gc, vector<StreetSe
 
 void StreetMapImpl::addSegment(StreetSegment* segment)
 {
-    allSegments.insert(segment);
+    allSegments.push_back(segment);
     std::vector<StreetSegment*>* sharesStartCoord = coordToSegments.find(segment->start);
     if (sharesStartCoord != nullptr)
     {
