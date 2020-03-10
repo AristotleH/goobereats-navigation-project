@@ -246,7 +246,7 @@ inline double rad2deg(double rad) {
 
 /**
 * Returns the distance between two points on the Earth.
-* Direct translation from http://en.wikipedia.org/wiki/Haversine_formula
+* Direct translation from http://en.wikipedia.org/wiki/Haversine_formula`
 * @param lat1d Latitude of the first point in degrees
 * @param lon1d Longitude of the first point in degrees
 * @param lat2d Latitude of the second point in degrees
