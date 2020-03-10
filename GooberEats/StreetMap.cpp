@@ -70,7 +70,6 @@ bool StreetMapImpl::load(string mapFile)
     // variables that will be reused throughout the loading process of all StreetSegment objects
     // (streets and their names)
     StreetSegment* street;
-    StreetSegment* reversedStreet;
     std::string streetName;
     
     // variables that will be reused throughout the loading process of all StreetSegment objects
@@ -167,7 +166,7 @@ void StreetMapImpl::addSegment(StreetSegment* segment)
     }
 }
 /*
- Create new segment with the same coordinates, but with swapped positions so the direction is reversed.
+ Create new segment with the same coordinates, but with swapped coordinates so its direction is reversed.
  */
 inline
 StreetSegment* StreetMapImpl::reverse(const StreetSegment* original)

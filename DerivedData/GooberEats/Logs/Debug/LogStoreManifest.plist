@@ -176,6 +176,40 @@
 			<key>uniqueIdentifier</key>
 			<string>B5563804-6F08-42DE-B473-684AB7A13629</string>
 		</dict>
+		<key>C6DA29A8-FCE3-4F66-970D-3ADC7D3CF791</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C6DA29A8-FCE3-4F66-970D-3ADC7D3CF791.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>GooberEats project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>GooberEats</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug GooberEats</string>
+			<key>timeStartedRecording</key>
+			<real>605517954.26415598</real>
+			<key>timeStoppedRecording</key>
+			<real>605517955.67217696</real>
+			<key>title</key>
+			<string>Debug GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>C6DA29A8-FCE3-4F66-970D-3ADC7D3CF791</string>
+		</dict>
 	</dict>
 </dict>
 </plist>

@@ -34,7 +34,7 @@
 			<key>uniqueIdentifier</key>
 			<string>48C4F003-E5D2-4F0A-9826-17A29874AAB3</string>
 		</dict>
-		<key>D67CFB83-0982-4F13-83B2-AC2EF327AA62</key>
+		<key>BCD13F81-6B31-448B-B0F7-0E2D1ED807A6</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -43,7 +43,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
 			<key>fileName</key>
-			<string>D67CFB83-0982-4F13-83B2-AC2EF327AA62.xcactivitylog</string>
+			<string>BCD13F81-6B31-448B-B0F7-0E2D1ED807A6.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -54,13 +54,13 @@
 			<key>signature</key>
 			<string>GooberEats-gczddfqyneagcdejkacmjglkwkcr</string>
 			<key>timeStartedRecording</key>
-			<real>605517528.46590495</real>
+			<real>605517952.51730001</real>
 			<key>timeStoppedRecording</key>
-			<real>605517529.47598898</real>
+			<real>605517954.25300002</real>
 			<key>title</key>
 			<string>Build target GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>D67CFB83-0982-4F13-83B2-AC2EF327AA62</string>
+			<string>BCD13F81-6B31-448B-B0F7-0E2D1ED807A6</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>
