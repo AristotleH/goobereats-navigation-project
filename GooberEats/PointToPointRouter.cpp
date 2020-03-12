@@ -48,7 +48,7 @@ double fScore(const MapNode* node)
  */
 struct MapNodePtrComparator
 {
-    bool operator() (const MapNode* lhs, const MapNode* rhs)
+    bool operator() (const MapNode* lhs, const MapNode* rhs) const
     {
         // greater than and not less than because MapNodes with least f-score are prioritized
         return (fScore(lhs) > fScore(rhs));
@@ -158,41 +158,75 @@ DeliveryResult PointToPointRouterImpl::generatePointToPointRoute(
             // for each connecting segment to the current node
             for (auto it = connectingSegments.begin(); it != connectingSegments.end(); ++it)
             {
+                // if the connecting segment's ending coordinate is one that we've already visited, ignore the segment
                 if (closed.find(it->end) != closed.end())
                     continue;
+                
+                // compute the g and h scores of the to-be-created node at the end of the connecting segment
                 g = current->m_gScore + distanceEarthMiles(it->start, it->end);
                 h = distanceEarthMiles(it->end, end);
                 
+                // generate a new MapNode with the arguments...
+                    // &allMapNodes: a pointer to the allMapNodes list that this node will be added to
+                    // it->end: the location of this node at the ending coordinate of the connecting segment
+                    // current: the MapNode immediately previous to this connecting segment (node for the
+                        // segment's starting coordinate)
+                    // StreetSegment(it->start, it->end, it->name): a new StreetSegment created from the connecting segment's
+                        // data
+                    // g: our computed g score
+                    // h: our computed h score
                 next = new MapNode(&allMapNodes,
                                    it->end,
                                    current,
                                    StreetSegment(it->start, it->end, it->name),
                                    g,
                                    h);
+                // add this new node to the queue
                 open.push(next);
             }
         }
     }
+    // if we exited the loop because we successfully reached the goal, construct a path back to the start and pu
+        // that path in the route vector
     if (result == DELIVERY_SUCCESS)
         constructPath(current, route, totalDistanceTravelled);
     
+    // delete all nodes that were created
     deleteMapNodes(allMapNodes);
+    // return the result we reached
     return result;
 }
 
+/*
+ Builds a list of StreetSegments from the starting coordinate to the ending coordinate based on the
+ linked list of MapNodes that were created during A* and passes back their total distance.
+ Requires the starting node's previous pointer to point to nullptr; the above A* implementation doesn't revisit points,
+ so lists won't be circular and the below loop won't be infinite.
+ */
 void PointToPointRouterImpl::constructPath(const MapNode* node, list<StreetSegment>& route, double& distance) const
 {
+    // the distance of all segments begins at zero
     distance = 0;
+    // for every MapNode linked to the goal's MapNode
     while (node->m_prevNode != nullptr)
     {
+        // put the MapNode at the front of the list - we're going from the end to the start of these map nodes,
+            // so we need to reverse their order
         route.push_front(node->m_prevSegment);
-        distance += distanceEarthMiles( node->m_prevSegment.start, node->m_prevSegment.end);
+        // add the distance of the map node to the total distance
+        distance += distanceEarthMiles(node->m_prevSegment.start, node->m_prevSegment.end);
+        // go to the next map node that's closer to the origin
         node = node->m_prevNode;
     }
 }
 
+/*
+ Deletes all MapNodes in a list of pointers to MapNodes.
+ */
 void PointToPointRouterImpl::deleteMapNodes(list<MapNode*>& nodes) const
 {
+    // continously sets an iterator to the beginning of the list and deletes the dynamically-allocated
+        // MapNode at that position and the pointer itself until the list is empty
     auto it = nodes.begin();
     while (!nodes.empty())
     {
