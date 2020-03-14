@@ -1,1 +1,18 @@
-
+1. If mapdata.txt has N lines of data, StreetMap's load() is O(N).
+2. If each of StreetMap's mapped GeoCoords is paired with a vector of StreetSegment pointers with an average size
+    of N, then StreetMap's getSegmentsThatStartWith() is O(N).
+3. I used the A* search algorithm in generatePointToPointRoute(), so per Project 4 FAQ #5, I'll describe the data structures
+    I used within the algorithm instead of its time complexity. generatePointToPointRoute() uses the struct MapNode to
+    keep track of GeoCoords that the algorithm is searching alongside their corresponding StreetSegments and paths taken.
+    In addition, an std::list (allMapNodes) is used to keep track of all dynamically-allocated MapNodes, an
+    std::priority_queue (open), which sorts by prioritizing MapNodes that are predicted to have the shortest total path, is
+    used to hold pointers to MapNodes that are ready to be processed, and an std::set (closed) is used to store GeoCoords
+    whose MapNodes are not to be processed as they have been processed once before.
+4. I used a modified version of simulated annealing in optimizeDeliveryOrder(), so per Project 4 FAQ #5, I'll describe the data
+    structures I used within the algorithm instead of its time complexity. I used a total of three vectors to represent
+    different stages of the delivery order's progression. The "current" vector contains the order most recently accepted
+    by the simulated annealing algorithm, even if it isn't the order with the smallest distance. The "modified" vector
+    contains an order that is randomly altered during each iteration of the algorithm's loop; this vector is sometimes
+    accepted as the "current" vector's order depending on the simulated annealing algorithm. The "lowest" vector is my
+    addition to the algorithm which always keeps track of the order with the lowest distance. It's the "lowest" vector's
+    order that replaces the "deliveries" vector which is passed-by-reference into the function.

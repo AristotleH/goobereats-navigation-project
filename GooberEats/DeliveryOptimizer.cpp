@@ -43,7 +43,7 @@ DeliveryOptimizerImpl::~DeliveryOptimizerImpl()
 
 /*
  Finds a closer-to-optimal solution to the TSP applied to the list of delivery locations through a modification
- of the simulated annealing algorithm.
+ of simulated annealing.
  */
 void DeliveryOptimizerImpl::optimizeDeliveryOrder(
     const GeoCoord& depot,
@@ -122,7 +122,8 @@ void DeliveryOptimizerImpl::optimizeDeliveryOrder(
             }
         }
         
-        // if we've completed enough attempts to match the number of deliveries, lower the temperature and reset the counter
+        // if we've completed enough attempts to match the number of deliveries during this temperature, lower the
+            // temperature and reset the counter
         if (attemptsPerTemp > NUM_DELIVERIES)
         {
             temp *= PCT_HEAT_RETAINED;

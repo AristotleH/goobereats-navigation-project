@@ -1,11 +1,3 @@
-//
-//  ExpandableHashMap.h
-//  GooberEats
-//
-//  Created by Aristotle Henderson.
-//  Copyright © 2020 Aristotle Henderson. All rights reserved.
-//
-
 #ifndef ExpandableHashMap_h
 #define ExpandableHashMap_h
 
@@ -123,6 +115,7 @@ int ExpandableHashMap<KeyType, ValueType>::size() const
     // size is defined by the number of pairs in the hash map
     return m_numPairs;
 }
+
 template<typename KeyType, typename ValueType>
 void ExpandableHashMap<KeyType, ValueType>::associate(const KeyType& key, const ValueType& value)
 {

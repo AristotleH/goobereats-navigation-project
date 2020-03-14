@@ -6,6 +6,34 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>26822190-550B-4C64-A5DF-2E3B1C32EDDD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
+			<key>fileName</key>
+			<string>26822190-550B-4C64-A5DF-2E3B1C32EDDD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>GooberEats-hdvisfbyecttfndhctzylouezybk</string>
+			<key>timeStartedRecording</key>
+			<real>605816764.45491898</real>
+			<key>timeStoppedRecording</key>
+			<real>605816766.42352998</real>
+			<key>title</key>
+			<string>Build target GooberEats</string>
+			<key>uniqueIdentifier</key>
+			<string>26822190-550B-4C64-A5DF-2E3B1C32EDDD</string>
+		</dict>
 		<key>48C4F003-E5D2-4F0A-9826-17A29874AAB3</key>
 		<dict>
 			<key>className</key>
@@ -34,7 +62,7 @@
 			<key>uniqueIdentifier</key>
 			<string>48C4F003-E5D2-4F0A-9826-17A29874AAB3</string>
 		</dict>
-		<key>5EB42CFD-BE07-4507-8BC2-052FC892C87C</key>
+		<key>B1898CFF-E9D4-4BD6-843D-434471934141</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -43,7 +71,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
 			<key>fileName</key>
-			<string>5EB42CFD-BE07-4507-8BC2-052FC892C87C.xcactivitylog</string>
+			<string>B1898CFF-E9D4-4BD6-843D-434471934141.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -54,13 +82,13 @@
 			<key>signature</key>
 			<string>GooberEats-gczddfqyneagcdejkacmjglkwkcr</string>
 			<key>timeStartedRecording</key>
-			<real>605679197.305457</real>
+			<real>605835062.85743594</real>
 			<key>timeStoppedRecording</key>
-			<real>605679198.21275604</real>
+			<real>605835065.03689599</real>
 			<key>title</key>
 			<string>Build target GooberEats</string>
 			<key>uniqueIdentifier</key>
-			<string>5EB42CFD-BE07-4507-8BC2-052FC892C87C</string>
+			<string>B1898CFF-E9D4-4BD6-843D-434471934141</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>
